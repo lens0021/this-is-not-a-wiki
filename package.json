@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "npx prettier --check .",
+    "fix": "npx prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
