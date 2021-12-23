@@ -17,4 +17,4 @@ echo "require_once 'NoWikiSettings.php';" >> LocalSettings.php
 # TODO create xmls
 # TODO import xmls
 
-php maintenance/rebuildFileCache.php;
+php maintenance/rebuildFileCache.php --all
