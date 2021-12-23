@@ -13,5 +13,7 @@ a wiki markup language for MediaWiki.
 * Special pages
 * Search
 
+{{Requirements}}
+
 ; Next step
 : [[Getting Started]].

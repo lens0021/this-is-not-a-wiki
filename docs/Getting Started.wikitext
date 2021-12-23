@@ -1,6 +1,4 @@
-== Requirements ==
-
-* [https://www.docker.com/ Docker]
+{{Requirements}}
 
 == Build ==
 

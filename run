@@ -14,11 +14,8 @@ php maintenance/install.php \
 
 echo "require_once 'NoWikiSettings.php';" >> LocalSettings.php
 
-for file in /workspace/src/*; do
-  title="$(basename "$file" | sed -e 's/.wikitext//')"
-  php maintenance/edit.php \
-    --no-rc \
-    "$title" < "$file"
-done
+php extensions/ThisIsNotAWiki/maintenance/importWikitext.php /workspace/src/
 
-php maintenance/rebuildFileCache.php --start 1 --all
+php maintenance/rebuildFileCache.php --all
+
+php extensions/ThisIsNotAWiki/maintenance/replaceNamespace.php /workspace/dist/

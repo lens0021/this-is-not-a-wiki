@@ -12,13 +12,16 @@
   "AutoloadNamespaces": {
     "MediaWiki\\Extension\\ThisIsNotAWiki\\": "src/"
   },
-  "Hooks": {},
+  "Hooks": {
+    "GetLocalURL": "main"
+  },
   "HookHandlers": {
     "main": {
       "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks",
       "services": []
     }
   },
+  "config": {},
   "MessagesDirs": {
     "ThisIsNotAWiki": ["i18n"]
   },
