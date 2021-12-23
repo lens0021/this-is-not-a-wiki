@@ -1,0 +1,17 @@
+name: Deploy docs
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          docker run --rm -v "$(pwd)"/docs:/workspace/src -v "$(pwd)"/dist:/workspace/dist ghcr.io/lens0021/this-is-not-a-wiki
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
