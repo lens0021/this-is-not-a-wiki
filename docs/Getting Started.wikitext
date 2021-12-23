@@ -1,0 +1,18 @@
+== Requirements ==
+
+* [https://www.docker.com/ Docker]
+
+== Build ==
+
+<syntaxhighlight lang="shell">
+docker build --tag nowiki .
+</syntaxhighlight>
+
+== Usage ==
+
+<syntaxhighlight lang="shell">
+docker run --rm \
+  -v "$(pwd)"/src:/workspace/src \
+  -v "$(pwd)"/dist:/workspace/dist \
+  ghcr.io/lens0021/nowiki
+</syntaxhighlight>

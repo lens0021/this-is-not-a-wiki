@@ -1,0 +1,17 @@
+'''This Is Not a Wiki''' is a static web page generator for Wikitext,
+a wiki markup language for MediaWiki.
+
+== Supported features ==
+
+* Parsing wikitext
+* Transcluding Templates
+
+== Unsuporretd features ==
+
+* History
+* Editing
+* Special pages
+* Search
+
+; Next step
+: [[Getting Started]].

@@ -1,1 +1,4 @@
-node_modules
+/node_modules/
+/extension/vendor/
+/extension/composer.lock
+/dist/
