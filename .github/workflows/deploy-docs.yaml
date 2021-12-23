@@ -11,7 +11,7 @@ jobs:
           docker run --rm -v "$(pwd)"/docs:/workspace/src -v "$(pwd)"/dist:/workspace/dist ghcr.io/lens0021/this-is-not-a-wiki
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@4.1.8
         with:
           branch: gh-pages
           folder: dist
