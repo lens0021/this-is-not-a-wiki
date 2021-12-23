@@ -19,3 +19,4 @@ php extensions/ThisIsNotAWiki/maintenance/importWikitext.php /workspace/src/
 php maintenance/rebuildFileCache.php --all
 
 php extensions/ThisIsNotAWiki/maintenance/replaceNamespace.php /workspace/dist/
+rm -rf /workspace/dist/history/
