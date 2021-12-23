@@ -16,7 +16,8 @@ echo "require_once 'NoWikiSettings.php';" >> LocalSettings.php
 
 php extensions/ThisIsNotAWiki/maintenance/importWikitext.php /workspace/src/
 
-php maintenance/rebuildFileCache.php --all
+php maintenance/purgeList.php --namespace=0
+php maintenance/rebuildFileCache.php --overwrite
 
 php extensions/ThisIsNotAWiki/maintenance/replaceNamespace.php /workspace/dist/
 rm -rf /workspace/dist/history/
