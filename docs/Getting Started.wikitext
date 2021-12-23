@@ -3,7 +3,7 @@
 == Build ==
 
 <syntaxhighlight lang="shell">
-docker build --tag nowiki .
+docker build --tag ThisIsNotAWiki .
 </syntaxhighlight>
 
 == Usage ==
@@ -12,5 +12,5 @@ docker build --tag nowiki .
 docker run --rm \
   -v "$(pwd)"/src:/workspace/src \
   -v "$(pwd)"/dist:/workspace/dist \
-  ghcr.io/lens0021/nowiki
+  ghcr.io/lens0021/ThisIsNotAWiki
 </syntaxhighlight>
