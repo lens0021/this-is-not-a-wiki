@@ -67,9 +67,9 @@ class ImportWikitext extends Maintenance {
 			$subStatus = $updater->getStatus();
 
 			if ( $subStatus->isOK() ) {
-				$this->output( "done\n" );
+				$this->output( " done\n" );
 			} else {
-				$this->output( "failed\n" );
+				$this->output( " failed\n" );
 			}
 			$status->merge( $subStatus );
 		}
