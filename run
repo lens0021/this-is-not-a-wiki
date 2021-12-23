@@ -14,6 +14,7 @@ php maintenance/install.php \
 
 echo "require_once 'NoWikiSettings.php';" >> LocalSettings.php
 
+echo 'Index' | php maintenance/edit.php 'MediaWiki:Mainpage'
 php extensions/ThisIsNotAWiki/maintenance/importWikitext.php /workspace/src/
 
 php maintenance/purgeList.php --namespace=0

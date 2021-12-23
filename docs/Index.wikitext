@@ -17,3 +17,4 @@ a wiki markup language for MediaWiki.
 
 ; Next step
 : [[Getting Started]].
+{{DISPLAYTITLE:This Is Not a Wiki}}
