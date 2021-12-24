@@ -13,7 +13,8 @@
     "MediaWiki\\Extension\\ThisIsNotAWiki\\": "src/"
   },
   "Hooks": {
-    "GetLocalURL": "main"
+    "GetLocalURL": "main",
+    "OutputPageAfterGetHeadLinksArray": "main"
   },
   "HookHandlers": {
     "main": {
