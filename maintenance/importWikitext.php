@@ -32,10 +32,7 @@ class ImportWikitext extends Maintenance {
 
 		$slot = SlotRecord::MAIN;
 
-			$user = User::newSystemUser( User::MAINTENANCE_SCRIPT_USER, [ 'steal' => true ] );
-		if ( $user->isAnon() ) {
-			$user->addToDatabase();
-		}
+		$user = User::newSystemUser( User::MAINTENANCE_SCRIPT_USER, [ 'steal' => true ] );
 		StubGlobalUser::setUser( $user );
 
 		$status = \StatusValue::newGood();
