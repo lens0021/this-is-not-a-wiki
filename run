@@ -18,6 +18,7 @@ echo 'Index' | php maintenance/edit.php 'MediaWiki:Mainpage'
 php extensions/ThisIsNotAWiki/maintenance/importWikitext.php /workspace/src/
 
 php maintenance/purgeList.php --namespace=0
+php maintenance/runJobs.php
 php maintenance/rebuildFileCache.php --overwrite
 
 php extensions/ThisIsNotAWiki/maintenance/replaceNamespace.php /workspace/dist/

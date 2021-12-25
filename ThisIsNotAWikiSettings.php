@@ -12,6 +12,9 @@ $wgCapitalLinks = false;
 $wgRestrictDisplayTitle = false;
 $wgUseInstantCommons = true;
 
+// Etc
+$wgJobRunRate = 0;
+
 // Skin
 $wgDefaultSkin = 'vector';
 
