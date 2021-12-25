@@ -9,11 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
       - uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
-      - run: npm install
-      - run: npm test
+            ${{ runner.os }}-yarn-
+      - run: yarn --dev
+      - run: yarn run test

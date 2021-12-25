@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "test": "npm run lint",
-    "lint": "npx prettier --check .",
-    "fix": "npx prettier --write ."
+    "test": "yarn run lint",
+    "lint": "yarn run prettier --check .",
+    "fix": "yarn run prettier --write ."
   },
   "devDependencies": {
     "prettier": "^2.5.1"
