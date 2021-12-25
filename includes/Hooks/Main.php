@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Extension\ThisIsNotAWiki;
+namespace MediaWiki\Extension\ThisIsNotAWiki\Hooks;
 
 use Config;
 use FauxRequest;
@@ -9,11 +9,13 @@ use OutputPage;
 use ResourceLoader;
 use ResourceLoaderContext;
 use Title;
+use Skin;
 
-class Hooks implements
+class Main implements
 	\MediaWiki\Hook\BeforePageDisplayHook,
 	\MediaWiki\Hook\GetLocalURLHook,
-	\MediaWiki\Hook\OutputPageAfterGetHeadLinksArrayHook
+	\MediaWiki\Hook\OutputPageAfterGetHeadLinksArrayHook,
+	\MediaWiki\Hook\SkinAddFooterLinksHook
 {
 	/** @var ResourceLoaderContext */
 	private $rlClientContext;
@@ -34,11 +36,6 @@ class Hooks implements
 	public function __construct( Config $config ) {
 		$this->htmlDirectory = $config->get( 'ThisIsNotAWikiHtmlDirectory' );
 		$this->styleDirectory = $config->get( 'ThisIsNotAWikiStyleDirectory' );
-	}
-
-	/** @inheritDoc */
-	public function onBeforePageDisplay( $out, $skin ): void {
-		$out->addModuleStyles( 'ext.ThisIsNotAWiki.styles' );
 	}
 
 	/** @inheritDoc */

@@ -22,14 +22,18 @@
     "remoteExtPath": "ThisIsNotAWiki/resources"
   },
   "Hooks": {
-    "BeforePageDisplay": "main",
+    "BeforePageDisplay": "Adder",
     "GetLocalURL": "main",
-    "OutputPageAfterGetHeadLinksArray": "main"
+    "OutputPageAfterGetHeadLinksArray": "main",
+	"SkinAddFooterLinks": "Adder"
   },
   "HookHandlers": {
     "main": {
-      "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks",
+      "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks\\Main",
       "services": ["MainConfig"]
+    },
+    "Adder": {
+      "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks\\Adder"
     }
   },
   "config": {
@@ -40,6 +44,10 @@
     "ThisIsNotAWikiStyleDirectory": {
       "value": ".",
       "description": "Relative Path to the dist directory of CSS files from $wgThisIsNotAWikiHtmlDirectory."
+    },
+    "ThisIsNotAWikiFooterUrl": {
+      "value": "",
+      "description": "Url that is added as a footer item."
     }
   },
   "MessagesDirs": {

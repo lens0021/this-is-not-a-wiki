@@ -39,11 +39,16 @@ if ( file_exists( '/workspace/src/.nowiki.json' ) ) {
 		wfLoadExtensions( $config['extensions'] );
 	}
 
-	// Globals
+	// wg variables
 	if ( isset( $config['wg'] ) ) {
 		foreach ( $config['wg'] as $key => $val ) {
 			$key = 'wg' . ucfirst( $key );
 			$GLOBALS[$key] = $val;
 		}
+	}
+
+	// Etc
+	if ( isset( $config['url'] ) ) {
+		$wgThisIsNotAWikiFooterUrl = $config['url'];
 	}
 }
