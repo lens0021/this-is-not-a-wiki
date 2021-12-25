@@ -17,21 +17,24 @@ require_once "$IP/maintenance/Maintenance.php";
 class BuildStyles extends Maintenance {
 	public function __construct() {
 		parent::__construct();
-		$this->addDescription( 'Build styles based on the files on dist/load directory.' );
+		$this->addDescription( 'Build styles based on the CSS files on $wgThisIsNotAWikiStyleDirectory.' );
 	}
 
 	public function execute() {
-		global $wgThisIsNotAWikiDist, $wgLanguageCode, $wgDefaultSkin;
+		global $wgThisIsNotAWikiHtmlDirectory, $wgThisIsNotAWikiStyleDirectory, $wgLanguageCode, $wgDefaultSkin;
 
-		if ( str_ends_with( $wgThisIsNotAWikiDist, '/' ) ) {
-			$wgThisIsNotAWikiDist = rtrim( $wgThisIsNotAWikiDist, '/' );
+		if ( str_ends_with( $wgThisIsNotAWikiHtmlDirectory, '/' ) ) {
+			$wgThisIsNotAWikiHtmlDirectory = rtrim( $wgThisIsNotAWikiHtmlDirectory, '/' );
+		}
+		if ( str_ends_with( $wgThisIsNotAWikiStyleDirectory, '/' ) ) {
+			$wgThisIsNotAWikiStyleDirectory = rtrim( $wgThisIsNotAWikiStyleDirectory, '/' );
 		}
 
 		MediaWikiServices::getInstance()->getDBLoadBalancerFactory()->disableChronologyProtection();
 
 		$resourceLoader = MediaWikiServices::getInstance()->getResourceLoader();
 
-		foreach ( glob( "$wgThisIsNotAWikiDist/load/*.css" ) as $filename ) {
+		foreach ( glob( "$wgThisIsNotAWikiHtmlDirectory/$wgThisIsNotAWikiStyleDirectory/*.css" ) as $filename ) {
 			$query = ResourceLoader::makeLoaderQuery(
 				[ basename( $filename, '.css' ) ],
 				$wgLanguageCode,

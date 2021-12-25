@@ -18,15 +18,21 @@ class Hooks implements
 	private $rlClientContext;
 
 	/**
-	 * @var string The path to the dist directory.
+	 * @var string The path to the directory contains html files.
 	 */
-	private $dist;
+	private $htmlDirectory;
+
+	/**
+	 * @var string The path to the directory contains style files.
+	 */
+	private $styleDirectory;
 
 	/**
 	 * @param Config $config
 	 */
 	public function __construct( Config $config ) {
-		$this->dist = $config->get( 'ThisIsNotAWikiDist' );
+		$this->htmlDirectory = $config->get( 'ThisIsNotAWikiHtmlDirectory' );
+		$this->styleDirectory = $config->get( 'ThisIsNotAWikiStyleDirectory' );
 	}
 
 	/** @inheritDoc */
@@ -68,33 +74,33 @@ class Hooks implements
 			$group = $module->getGroup();
 			if ( !$module->shouldEmbedModule( $context ) ) {
 				if ( $group !== 'user' || !$module->isKnownEmpty( $context ) ) {
+					$path = './' . $this->styleDirectory . "/$name.css";
+					$tags[$name] = Html::linkedStyle( $path );
 					$this->addStyleToList( $name );
-					$tags[$name] = Html::linkedStyle( "./load/$name.css" );
 				}
 			}
 		}
 	}
 
 	/**
-	 * @param string $module
+	 * @param string $name
 	 */
 	private function addStyleToList( $name ) {
-		$dist = $this->dist;
-		if ( !is_dir( $dist ) ) {
+		if ( MW_ENTRY_POINT != 'cli' ) {
 			return;
 		}
 
-		if ( str_ends_with( $dist, '/' ) ) {
-			$dist = rtrim( $dist, '/' );
+		$path = $this->htmlDirectory;
+		if ( str_ends_with( $path, '/' ) ) {
+			$path = rtrim( $path, '/' );
 		}
-		$load = "$dist/load";
-		if ( !is_dir( $load ) ) {
-			mkdir( $load, 0777, true );
+		$path .= $this->styleDirectory;
+		if ( !is_dir( $path ) ) {
+			mkdir( $path, 0777, true );
 		}
-		if ( file_exists( "$load/$name" ) ) {
-			return;
+		if ( !file_exists( "$path/$name" ) ) {
+			touch( "$path/$name.css" );
 		}
-		touch( "$load/$name.css" );
 	}
 
 	/**

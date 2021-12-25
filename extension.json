@@ -23,9 +23,13 @@
     }
   },
   "config": {
-    "ThisIsNotAWikiDist": {
+    "ThisIsNotAWikiHtmlDirectory": {
       "value": "/workspace/dist",
-      "description": "Path to the dist directory."
+      "description": "Path to the dist directory of HTML files."
+    },
+    "ThisIsNotAWikiStyleDirectory": {
+      "value": ".",
+      "description": "Relative Path to the dist directory of CSS files from $wgThisIsNotAWikiHtmlDirectory."
     }
   },
   "MessagesDirs": {
