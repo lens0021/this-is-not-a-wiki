@@ -15,7 +15,6 @@ class Rename extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription( 'Replace the "ns:" prefix with readable text' );
-		$this->addArg( 'path', 'Path to the directory html files locate' );
 	}
 
 	public function execute() {
