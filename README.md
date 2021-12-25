@@ -1,6 +1,6 @@
-# This Is Not a Wiki
+# This Is Not A Wiki
 
-**This Is Not a Wiki** is a static web page generator for Wikitext, a wiki markup language for MediaWiki.
+**This Is Not A Wiki** is a static web page generator for Wikitext, a wiki markup language for MediaWiki.
 
 Read more on https://lens0021.github.io/this-is-not-a-wiki/.
 
