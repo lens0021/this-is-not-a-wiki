@@ -11,6 +11,7 @@ use ResourceLoaderContext;
 use Title;
 
 class Hooks implements
+	\MediaWiki\Hook\BeforePageDisplayHook,
 	\MediaWiki\Hook\GetLocalURLHook,
 	\MediaWiki\Hook\OutputPageAfterGetHeadLinksArrayHook
 {
@@ -33,6 +34,11 @@ class Hooks implements
 	public function __construct( Config $config ) {
 		$this->htmlDirectory = $config->get( 'ThisIsNotAWikiHtmlDirectory' );
 		$this->styleDirectory = $config->get( 'ThisIsNotAWikiStyleDirectory' );
+	}
+
+	/** @inheritDoc */
+	public function onBeforePageDisplay( $out, $skin ): void {
+		$out->addModuleStyles( 'ext.ThisIsNotAWiki.styles' );
 	}
 
 	/** @inheritDoc */
@@ -94,7 +100,7 @@ class Hooks implements
 		if ( str_ends_with( $path, '/' ) ) {
 			$path = rtrim( $path, '/' );
 		}
-		$path .= $this->styleDirectory;
+		$path .= '/' . $this->styleDirectory;
 		if ( !is_dir( $path ) ) {
 			mkdir( $path, 0777, true );
 		}

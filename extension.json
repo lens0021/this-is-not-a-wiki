@@ -12,7 +12,17 @@
   "AutoloadNamespaces": {
     "MediaWiki\\Extension\\ThisIsNotAWiki\\": "includes/"
   },
+  "ResourceModules": {
+    "ext.ThisIsNotAWiki.styles": {
+      "styles": ["ext.ThisIsNotAWiki.styles.less"]
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "resources",
+    "remoteExtPath": "ThisIsNotAWiki/resources"
+  },
   "Hooks": {
+    "BeforePageDisplay": "main",
     "GetLocalURL": "main",
     "OutputPageAfterGetHeadLinksArray": "main"
   },
