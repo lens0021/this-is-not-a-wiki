@@ -21,5 +21,6 @@ php maintenance/purgeList.php --namespace=0
 php maintenance/runJobs.php
 php maintenance/rebuildFileCache.php --overwrite
 
+php extensions/ThisIsNotAWiki/maintenance/buildStyles.php
 php extensions/ThisIsNotAWiki/maintenance/replaceNamespace.php /workspace/dist/
 rm -rf /workspace/dist/history/

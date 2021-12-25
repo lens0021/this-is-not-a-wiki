@@ -19,10 +19,15 @@
   "HookHandlers": {
     "main": {
       "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks",
-      "services": []
+      "services": [ "MainConfig" ]
     }
   },
-  "config": {},
+  "config": {
+	"ThisIsNotAWikiDist": {
+		"value": "/workspace/dist",
+		"description": "Path to the dist directory."
+	}
+  },
   "MessagesDirs": {
     "ThisIsNotAWiki": ["i18n"]
   },
