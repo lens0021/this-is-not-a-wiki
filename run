@@ -12,7 +12,7 @@ php maintenance/install.php \
   MediaWiki \
   Admin
 
-echo "require_once 'NoWikiSettings.php';" >> LocalSettings.php
+echo 'require_once '\''ThisIsNotAWikiSettings.php'\'';' >> LocalSettings.php
 
 echo 'Index' | php maintenance/edit.php 'MediaWiki:Mainpage'
 php extensions/ThisIsNotAWiki/maintenance/importWikitext.php /workspace/src/
