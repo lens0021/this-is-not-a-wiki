@@ -26,3 +26,16 @@ $wgVectorDefaultSkinVersionForNewAccounts = '2';
 $wgVectorStickyHeader = [ 'logged_out' => true ];
 $wgVectorLanguageInHeader = $wgVectorStickyHeader;
 $wgVectorResponsive = true;
+
+// Extensions
+wfLoadExtensions( [
+	'Cite',
+	'ImageMap',
+	'MultimediaViewer',
+	'PageImages',
+	'ParserFunctions',
+	'Poem',
+	'Scribunto',
+	'SyntaxHighlight_GeSHi',
+	'TextExtracts',
+] );
