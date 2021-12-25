@@ -1,4 +1,4 @@
 /node_modules/
-/extension/vendor/
-/extension/composer.lock
+/vendor/
+/composer.lock
 /dist/

@@ -10,7 +10,7 @@
     "MediaWiki": ">= 1.37.0"
   },
   "AutoloadNamespaces": {
-    "MediaWiki\\Extension\\ThisIsNotAWiki\\": "src/"
+    "MediaWiki\\Extension\\ThisIsNotAWiki\\": "includes/"
   },
   "Hooks": {
     "GetLocalURL": "main",
