@@ -1,0 +1,5 @@
+* navigation
+** mainpage|mainpage-description
+** Getting Started|Getting Started
+** nowiki.json|.nowiki.json
+** helppage|help-mediawiki

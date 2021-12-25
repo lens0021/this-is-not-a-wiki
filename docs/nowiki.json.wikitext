@@ -1,0 +1,10 @@
+<syntaxhighlight lang="json">
+{
+  "skin": "Timeless",
+  "extensions": ["SyntaxHighlight_GeSHi"],
+  "wg": {
+    "sitename": "This Is Not A Wiki"
+  }
+}
+</syntaxhighlight>
+{{DISPLAYTITLE:.nowiki.json}}

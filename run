@@ -22,5 +22,5 @@ php maintenance/runJobs.php
 php maintenance/rebuildFileCache.php --overwrite
 
 php extensions/ThisIsNotAWiki/maintenance/buildStyles.php
-php extensions/ThisIsNotAWiki/maintenance/replaceNamespace.php /workspace/dist/
+php extensions/ThisIsNotAWiki/maintenance/rename.php
 rm -rf /workspace/dist/history/

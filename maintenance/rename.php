@@ -11,7 +11,7 @@ $IP = strval( getenv( 'MW_INSTALL_PATH' ) ) !== ''
 
 require_once "$IP/maintenance/Maintenance.php";
 
-class ReplaceNamespace extends Maintenance {
+class Rename extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription( 'Replace the "ns:" prefix with readable text' );
@@ -19,7 +19,8 @@ class ReplaceNamespace extends Maintenance {
 	}
 
 	public function execute() {
-		$path = $this->getArg( 0 );
+		global $wgThisIsNotAWikiHtmlDirectory;
+		$path = $wgThisIsNotAWikiHtmlDirectory;
 		if ( str_ends_with( $path, '/' ) ) {
 			$path = rtrim( $path, '/' );
 		}
@@ -42,8 +43,17 @@ class ReplaceNamespace extends Maintenance {
 			$newName = ltrim( $newName, ':' );
 			rename( "$path/$basename", "$path/$newName" );
 		}
+
+		foreach ( glob( "$path/*" ) as $filename ) {
+			$basename = basename( $filename );
+			if ( !str_contains( $basename, '.' ) ) {
+				continue;
+			}
+			$newName = preg_replace( "/%2E/", '.', $basename );
+			rename( "$path/$basename", "$path/$newName" );
+		}
 	}
 }
 
-$maintClass = ReplaceNamespace::class;
+$maintClass = Rename::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
