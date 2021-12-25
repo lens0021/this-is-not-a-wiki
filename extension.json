@@ -25,7 +25,8 @@
     "BeforePageDisplay": "Adder",
     "GetLocalURL": "main",
     "OutputPageAfterGetHeadLinksArray": "main",
-	"SkinAddFooterLinks": "Adder"
+	"SkinAddFooterLinks": "Adder",
+	"ParserOutputPostCacheTransform": "Hider"
   },
   "HookHandlers": {
     "main": {
@@ -34,6 +35,9 @@
     },
     "Adder": {
       "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks\\Adder"
+    },
+    "Hider": {
+      "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks\\Hider"
     }
   },
   "config": {
