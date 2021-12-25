@@ -7,6 +7,8 @@ use ContentHandler;
 use Maintenance;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
+use Status;
+use StatusValue;
 use StubGlobalUser;
 use Title;
 use User;
@@ -35,7 +37,7 @@ class ImportWikitext extends Maintenance {
 		$user = User::newSystemUser( User::MAINTENANCE_SCRIPT_USER, [ 'steal' => true ] );
 		StubGlobalUser::setUser( $user );
 
-		$status = \StatusValue::newGood();
+		$status = StatusValue::newGood();
 		foreach ( glob( "$path/*.wikitext" ) as $filename ) {
 			$title = Title::newFromText( $this->filenameToTitle( $filename ) );
 			if ( !$title ) {
@@ -72,7 +74,7 @@ class ImportWikitext extends Maintenance {
 		}
 
 		if ( !$status->isGood() ) {
-			$this->output( $status->getMessage( false, false, 'en' )->text() . "\n" );
+			$this->output( Status::wrap( $status )->getMessage( false, false, 'en' )->text() . "\n" );
 		}
 		return $status->isOK();
 	}
