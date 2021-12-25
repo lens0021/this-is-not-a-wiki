@@ -6,6 +6,7 @@
     "fix": "yarn run prettier --write ."
   },
   "devDependencies": {
+    "@prettier/plugin-xml": "^1.2.0",
     "prettier": "^2.5.1"
   },
   "prettier": {
