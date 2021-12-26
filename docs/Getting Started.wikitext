@@ -1,14 +1,36 @@
-{{Requirements}}
+== Requirements ==
+
+* [https://www.docker.com/ Docker]
 
 == Usage ==
 
-<syntaxhighlight lang="shell">
-mkdir src dist
-echo 'Hello, world!' > src/index.wikitext
-docker run \
+<syntaxhighlight lang="shell-session">
+$ mkdir src dist
+$ echo 'Hello, world!' > src/index.wikitext
+$ docker run \
   --rm \
   -v "$(pwd)"/src:/workspace/src \
   -v "$(pwd)"/dist:/workspace/dist \
   ghcr.io/lens0021/this-is-not-a-wiki
-ls dist
+$ ls dist
+ext.ThisIsNotAWiki.styles.css
+index.html
+jquery.makeCollapsible.styles.css
+Main_Page.html
+mediawiki.action.history.styles.css
+mediawiki.feedlink.css
+mediawiki.helplink.css
+mediawiki.htmlform.ooui.styles.css
+mediawiki.htmlform.styles.css
+mediawiki.interface.helpers.styles.css
+mediawiki.special.changeslist.css
+mediawiki.ui.button.css
+mediawiki.ui.icon.css
+mediawiki.widgets.DateInputWidget.styles.css
+mediawiki.widgets.styles.css
+oojs-ui-core.icons.css
+oojs-ui-core.styles.css
+oojs-ui.styles.indicators.css
+skins.vector.icons.css
+skins.vector.styles.css
 </syntaxhighlight>

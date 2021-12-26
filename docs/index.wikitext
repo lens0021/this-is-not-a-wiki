@@ -13,8 +13,6 @@ a wiki markup language for {{ml|MediaWiki}}.
 * Special pages
 * Search
 
-{{Requirements}}
-
 ; Next step
 : [[Getting Started]].
 {{DISPLAYTITLE:This Is Not A Wiki}}
