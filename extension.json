@@ -18,9 +18,9 @@
     }
   },
   "ResourceModuleSkinStyles": {
-	  "vector": {
-		  "+skins.vector.styles": "skins.vector.styles.less"
-	  }
+    "vector": {
+      "+skins.vector.styles": "skins.vector.styles.less"
+    }
   },
   "ResourceFileModulePaths": {
     "localBasePath": "resources",
@@ -63,6 +63,12 @@
     "ThisIsNotAWikiFooterUrl": {
       "value": "",
       "description": "Url that is added as a footer item."
+    },
+    "ThisIsNotAWikiEditUrl": {
+      "value": ""
+    },
+    "ThisIsNotAWikiHistoryUrl": {
+      "value": ""
     }
   },
   "MessagesDirs": {
