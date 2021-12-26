@@ -1,5 +1,5 @@
 '''This Is Not A Wiki''' is a static web page generator for Wikitext,
-a wiki markup language for MediaWiki.
+a wiki markup language for [http://mediawiki.org/ MediaWiki].
 
 == Supported features ==
 
@@ -8,8 +8,8 @@ a wiki markup language for MediaWiki.
 
 == Unsuporretd features ==
 
-* History
-* Editing
+* History view
+* All editors (WikiEditor, VisualEditor and CodeEditor)
 * Special pages
 * Search
 
