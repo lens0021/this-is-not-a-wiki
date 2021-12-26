@@ -1,6 +1,6 @@
 * navigation
 ** mainpage|mainpage-description
-* References
+* Docs
 ** Getting Started|Getting Started
 ** nowiki.json|.nowiki.json
 *
