@@ -22,11 +22,12 @@
     "remoteExtPath": "ThisIsNotAWiki/resources"
   },
   "Hooks": {
+	"ParserOutputPostCacheTransform": "Hider",
+	"SidebarBeforeOutput": "Hider",
+	"SkinAddFooterLinks": "Adder",
     "BeforePageDisplay": "Adder",
     "GetLocalURL": "main",
-    "OutputPageAfterGetHeadLinksArray": "main",
-	"SkinAddFooterLinks": "Adder",
-	"ParserOutputPostCacheTransform": "Hider"
+    "OutputPageAfterGetHeadLinksArray": "main"
   },
   "HookHandlers": {
     "main": {
