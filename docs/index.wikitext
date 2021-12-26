@@ -3,8 +3,9 @@ a wiki markup language for {{ml|MediaWiki}}.
 
 == Supported features ==
 
-* Parsing wikitext
-* Transcluding Templates
+* Parsing wikitext.
+* Transcluding Templates.
+* Using images on [[commons:Main Page|Wikimedia Commons]].
 
 == Unsuporretd features ==
 
@@ -12,6 +13,12 @@ a wiki markup language for {{ml|MediaWiki}}.
 * All editors (WikiEditor, VisualEditor and CodeEditor)
 * Special pages
 * Search
+
+=== Planned ===
+
+The follwing features are planned to be added.
+
+- Local images.
 
 ; Next step
 : [[Getting Started]].

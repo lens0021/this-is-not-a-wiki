@@ -2,6 +2,7 @@
 ** mainpage|mainpage-description
 * Docs
 ** Getting Started|Getting Started
+** Images|Images
 ** nowiki.json|.nowiki.json
 *
 ** helppage|help-mediawiki
