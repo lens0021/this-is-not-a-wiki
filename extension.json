@@ -17,6 +17,11 @@
       "styles": ["ext.ThisIsNotAWiki.styles.less"]
     }
   },
+  "ResourceModuleSkinStyles": {
+	  "vector": {
+		  "+skins.vector.styles": "skins.vector.styles.less"
+	  }
+  },
   "ResourceFileModulePaths": {
     "localBasePath": "resources",
     "remoteExtPath": "ThisIsNotAWiki/resources"
