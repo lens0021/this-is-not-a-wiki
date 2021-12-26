@@ -12,10 +12,8 @@ use Title;
 use Skin;
 
 class Main implements
-	\MediaWiki\Hook\BeforePageDisplayHook,
 	\MediaWiki\Hook\GetLocalURLHook,
-	\MediaWiki\Hook\OutputPageAfterGetHeadLinksArrayHook,
-	\MediaWiki\Hook\SkinAddFooterLinksHook
+	\MediaWiki\Hook\OutputPageAfterGetHeadLinksArrayHook
 {
 	/** @var ResourceLoaderContext */
 	private $rlClientContext;
