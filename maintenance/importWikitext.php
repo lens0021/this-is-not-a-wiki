@@ -23,13 +23,12 @@ class ImportWikitext extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription( 'Import *.wikitext files from the given path' );
-		$this->addArg( 'path', 'Path to the directory wikitext files locate' );
 	}
 
 	public function execute() {
-		$path = $this->getArg( 0 );
-		if ( str_ends_with( $path, '/' ) ) {
-			$path = rtrim( $path, '/' );
+		global $wgThisIsNotAWikiSourceDirectory;
+		if ( str_ends_with( $$wgThisIsNotAWikiSourceDirectory, '/' ) ) {
+			$$wgThisIsNotAWikiSourceDirectory = rtrim( $$wgThisIsNotAWikiSourceDirectory, '/' );
 		}
 
 		$slot = SlotRecord::MAIN;
@@ -38,7 +37,7 @@ class ImportWikitext extends Maintenance {
 		StubGlobalUser::setUser( $user );
 
 		$status = StatusValue::newGood();
-		foreach ( glob( "$path/*.wikitext" ) as $filename ) {
+		foreach ( glob( "$$wgThisIsNotAWikiSourceDirectory/*.wikitext" ) as $filename ) {
 			$title = Title::newFromText( $this->filenameToTitle( $filename ) );
 			if ( !$title ) {
 				$this->output( "Invalid title: $title" );

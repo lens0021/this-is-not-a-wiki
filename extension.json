@@ -41,6 +41,10 @@
     }
   },
   "config": {
+    "ThisIsNotAWikiSourceDirectory": {
+      "value": "/workspace/src",
+      "description": "Path to the source directory where wikitext files are"
+    },
     "ThisIsNotAWikiHtmlDirectory": {
       "value": "/workspace/dist",
       "description": "Path to the dist directory of HTML files."
