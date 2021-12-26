@@ -40,8 +40,21 @@ class Main implements
 		if ( MW_ENTRY_POINT != 'cli' ) {
 			return;
 		}
+		global $wgThisIsNotAWikiEditUrl, $wgThisIsNotAWikiHistoryUrl;
 		$name = Title::makeName( $title->getNamespace(), $title->getDBkey() );
-		$url = "./$name.html";
+		if ( preg_match( '/action=([^&]+)/', $query, $matches ) ) {
+			$action = $matches[1];
+			if ( $action === 'edit' && $wgThisIsNotAWikiEditUrl ) {
+				$url = str_replace( '$1', $name, $wgThisIsNotAWikiEditUrl );
+			} elseif ( $action === 'history' && $wgThisIsNotAWikiHistoryUrl ) {
+				$url = str_replace( '$1', $name, $wgThisIsNotAWikiHistoryUrl );
+			} else {
+				$url = "./$name.html";
+
+			}
+		} else {
+			$url = "./$name.html";
+		}
 	}
 
 	/** @inheritDoc */

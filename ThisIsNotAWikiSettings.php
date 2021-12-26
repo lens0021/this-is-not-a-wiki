@@ -32,23 +32,33 @@ if ( file_exists( '/workspace/src/.nowiki.json' ) ) {
 	if ( isset( $config['skin'] ) ) {
 		wfLoadSkin( $config['skin'] );
 		$wgDefaultSkin = strtolower( $config['skin'] );
+		unset( $config['skin'] );
 	}
 
 	// Extensions
-	if ( isset( $config['extensions'] ) && is_array( $config['extensions'] ) ) {
-		wfLoadExtensions( $config['extensions'] );
+	if ( isset( $config['Extensions'] ) ) {
+		if ( is_array( $config['Extensions'] ) ) {
+			wfLoadExtensions( $config['Extensions'] );
+		}
+		unset( $config['Extensions'] );
 	}
 
 	// wg variables
 	if ( isset( $config['wg'] ) ) {
 		foreach ( $config['wg'] as $key => $val ) {
-			$key = 'wg' . ucfirst( $key );
+			$key = 'wg' . $key;
 			$GLOBALS[$key] = $val;
 		}
+		unset( $config['wg'] );
 	}
 
 	// Etc
-	if ( isset( $config['url'] ) ) {
-		$wgThisIsNotAWikiFooterUrl = $config['url'];
+	if ( isset( $config['Url'] ) ) {
+		$wgThisIsNotAWikiFooterUrl = $config['Url'];
+		unset( $config['Url'] );
+	}
+	foreach ( $config as $key => $val ) {
+		$key = 'wgThisIsNotAWiki' . $key;
+		$GLOBALS[$key] = $val;
 	}
 }

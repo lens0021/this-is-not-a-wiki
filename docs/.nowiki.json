@@ -1,7 +1,9 @@
 {
-  "url": "https://github.com/lens0021/this-is-not-a-wiki",
-  "extensions": ["SyntaxHighlight_GeSHi"],
+  "Url": "https://github.com/lens0021/this-is-not-a-wiki",
+  "EditUrl": "https://github.com/lens0021/this-is-not-a-wiki/edit/main/docs/$1.wikitext",
+  "HistoryUrl": "https://github.com/lens0021/this-is-not-a-wiki/commits/main/docs/$1.wikitext",
+  "Extensions": ["SyntaxHighlight_GeSHi"],
   "wg": {
-    "sitename": "This Is Not A Wiki"
+    "Sitename": "This Is Not A Wiki"
   }
 }

@@ -1,7 +1,9 @@
 <syntaxhighlight lang="json">
 {
-  "skin": "Timeless",
-  "extensions": ["SyntaxHighlight_GeSHi"],
+  "Skin": "Timeless",
+  "EditUrl": "https://github.com/yourname/some-repository/edit/branch-name/path/to/$1.wikitext",
+  "HistoryUrl": "https://github.com/yourname/some-repository/commits/branch-name/path/to/$1.wikitext",
+  "Extensions": ["SyntaxHighlight_GeSHi"],
   "wg": {
     "sitename": "This Is Not A Wiki"
   }
