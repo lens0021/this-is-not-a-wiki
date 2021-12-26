@@ -17,8 +17,8 @@ echo 'require_once '\''ThisIsNotAWikiSettings.php'\'';' >> LocalSettings.php
 echo 'index' | php maintenance/edit.php 'MediaWiki:Mainpage'
 php extensions/ThisIsNotAWiki/maintenance/importWikitext.php
 
-php maintenance/purgeList.php --namespace=0
 php maintenance/runJobs.php
+php maintenance/purgeList.php
 php maintenance/rebuildFileCache.php --overwrite
 
 php extensions/ThisIsNotAWiki/maintenance/buildStyles.php
