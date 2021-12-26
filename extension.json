@@ -22,10 +22,11 @@
     "remoteExtPath": "ThisIsNotAWiki/resources"
   },
   "Hooks": {
-	"ParserOutputPostCacheTransform": "Hider",
-	"SidebarBeforeOutput": "Hider",
-	"SkinAddFooterLinks": "Adder",
-    "BeforePageDisplay": "Adder",
+    "ParserOutputPostCacheTransform": "hider",
+    "PersonalUrls": "hider",
+    "SidebarBeforeOutput": "hider",
+    "SkinAddFooterLinks": "adder",
+    "BeforePageDisplay": "adder",
     "GetLocalURL": "main",
     "OutputPageAfterGetHeadLinksArray": "main"
   },
@@ -34,10 +35,10 @@
       "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks\\Main",
       "services": ["MainConfig"]
     },
-    "Adder": {
+    "adder": {
       "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks\\Adder"
     },
-    "Hider": {
+    "hider": {
       "class": "MediaWiki\\Extension\\ThisIsNotAWiki\\Hooks\\Hider"
     }
   },

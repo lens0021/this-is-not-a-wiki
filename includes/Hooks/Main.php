@@ -9,7 +9,6 @@ use OutputPage;
 use ResourceLoader;
 use ResourceLoaderContext;
 use Title;
-use Skin;
 
 class Main implements
 	\MediaWiki\Hook\GetLocalURLHook,
