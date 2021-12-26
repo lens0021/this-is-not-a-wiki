@@ -27,8 +27,8 @@ class ImportWikitext extends Maintenance {
 
 	public function execute() {
 		global $wgThisIsNotAWikiSourceDirectory;
-		if ( str_ends_with( $$wgThisIsNotAWikiSourceDirectory, '/' ) ) {
-			$$wgThisIsNotAWikiSourceDirectory = rtrim( $$wgThisIsNotAWikiSourceDirectory, '/' );
+		if ( str_ends_with( $wgThisIsNotAWikiSourceDirectory, '/' ) ) {
+			$wgThisIsNotAWikiSourceDirectory = rtrim( $$wgThisIsNotAWikiSourceDirectory, '/' );
 		}
 
 		$slot = SlotRecord::MAIN;
@@ -37,7 +37,7 @@ class ImportWikitext extends Maintenance {
 		StubGlobalUser::setUser( $user );
 
 		$status = StatusValue::newGood();
-		foreach ( glob( "$$wgThisIsNotAWikiSourceDirectory/*.wikitext" ) as $filename ) {
+		foreach ( glob( "$wgThisIsNotAWikiSourceDirectory/*.wikitext" ) as $filename ) {
 			$title = Title::newFromText( $this->filenameToTitle( $filename ) );
 			if ( !$title ) {
 				$this->output( "Invalid title: $title" );
