@@ -14,6 +14,7 @@ $wgUseInstantCommons = true;
 
 // Etc
 $wgJobRunRate = 0;
+unset( $wgFooterIcons['poweredby'] );
 
 // Skin
 $wgVectorDefaultSkinVersion = '2';
