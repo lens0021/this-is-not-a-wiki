@@ -40,6 +40,9 @@ class Main implements
 		if ( MW_ENTRY_POINT != 'cli' ) {
 			return;
 		}
+		if ( $title->getInterwiki() ) {
+			return;
+		}
 		global $wgThisIsNotAWikiEditUrl, $wgThisIsNotAWikiHistoryUrl;
 		$name = Title::makeName( $title->getNamespace(), $title->getDBkey() );
 		if ( preg_match( '/action=([^&]+)/', $query, $matches ) ) {
