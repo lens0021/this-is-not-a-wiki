@@ -17,8 +17,7 @@ $wgJobRunRate = 0;
 
 // Skin
 $wgVectorDefaultSkinVersion = '2';
-$wgVectorDefaultSkinVersionForExistingAccounts = '2';
-$wgVectorDefaultSkinVersionForNewAccounts = '2';
+$wgVectorDefaultSidebarVisibleForAnonymousUser = true;
 $wgVectorStickyHeader = [ 'logged_out' => true ];
 $wgVectorLanguageInHeader = $wgVectorStickyHeader;
 $wgVectorResponsive = true;

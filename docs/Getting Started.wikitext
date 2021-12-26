@@ -1,16 +1,14 @@
 {{Requirements}}
 
-== Build ==
-
-<syntaxhighlight lang="shell">
-docker build --tag this-is-not-a-wiki .
-</syntaxhighlight>
-
 == Usage ==
 
 <syntaxhighlight lang="shell">
-docker run --rm \
+mkdir src dist
+echo 'Hello, world!' > src/index.wikitext
+docker run \
+  --rm \
   -v "$(pwd)"/src:/workspace/src \
   -v "$(pwd)"/dist:/workspace/dist \
   ghcr.io/lens0021/this-is-not-a-wiki
+ls dist
 </syntaxhighlight>
