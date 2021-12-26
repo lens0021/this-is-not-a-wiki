@@ -38,6 +38,9 @@ class Main implements
 
 	/** @inheritDoc */
 	public function onGetLocalURL( $title, &$url, $query ) {
+		if ( MW_ENTRY_POINT != 'cli' ) {
+			return;
+		}
 		$name = Title::makeName( $title->getNamespace(), $title->getDBkey() );
 		$url = "./$name.html";
 	}
