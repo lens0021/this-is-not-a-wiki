@@ -14,7 +14,7 @@ __TOC__
 {{DISPLAYTITLE:.nowiki.json}}
 
 == <code>Skin</code> ==
-See [[Skin]].
+See [[Skins]].
 
 == <code>EditUrl</code> ==
 TBD.
