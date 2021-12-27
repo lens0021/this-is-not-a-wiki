@@ -1,1 +1,9 @@
-[[mw:Special:MyLanguage/{{{1|}}}|{{{2|{{{1|}}}}}}]]
+<!--
+Links on the article on MediaWikiWiki(https://www.mediawiki.org/).
+
+Usage:
+
+* {{ml|link target on MediaWikiWiki}}
+* {{ml|link target on MediaWikiWiki|label}}
+
+-->[[mw:Special:MyLanguage/{{{1|}}}|{{{2|{{{1|}}}}}}]]

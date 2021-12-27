@@ -1,12 +1,80 @@
-== Requirements ==
+This page, we build a basic [[mw:en:"Hello, World!" program|Hello World]] page with {{nowiki}}.
+{{note|This page assumes unix-like OS.}}
 
-* [https://www.docker.com/ Docker]
+{{nowiki}} is formed of two parts: a script and a MediaWiki extension. To simply the whole building
+process, a docker image is provided and this guide will show the usage.
 
-== Usage ==
+; Requirement
+:* [https://www.docker.com/ Docker]
+
+If Docker is ready, you could go to the next step.
+
+----
+
+Create two directories, <code>src</code> and
+<code>dist</code>.
 
 <syntaxhighlight lang="shell-session">
 $ mkdir src dist
-$ echo 'Hello, world!' > src/index.wikitext
+</syntaxhighlight>
+
+Then create a wikitext file. Any file ends with <code>.wikitext</code> is considered as a wiki
+article by {{nowiki}}.
+
+<syntaxhighlight lang="shell-session">
+$ echo 'Hello, World!' > src/index.wikitext
+</syntaxhighlight>
+
+And run Docker with [https://docs.docker.com/storage/volumes/ volume mounting]:
+
+<syntaxhighlight lang="shell-session">
+$ docker run \
+  --rm \
+  -v "$(pwd)"/src:/workspace/src \
+  -v "$(pwd)"/dist:/workspace/dist \
+  ghcr.io/lens0021/this-is-not-a-wiki
+</syntaxhighlight>
+
+Open <code>"$(pwd)"/dist/index.html</code> on your browser.
+
+== Setting the title of the site ==
+
+For configurations, you must create [[nowiki.json|<code>.nowiki.json</code>]] file in your
+<code>src</code> directory.
+
+<syntaxhighlight lang="shell-session">
+$ cat <<EOF > src/.nowiki.json
+{
+  "wg": {
+    "Sitename": "My Site"
+  }
+}
+EOF
+</syntaxhighlight>
+
+Then build again.
+<syntaxhighlight lang="shell-session">
+$ docker run \
+  --rm \
+  -v "$(pwd)"/src:/workspace/src \
+  -v "$(pwd)"/dist:/workspace/dist \
+  ghcr.io/lens0021/this-is-not-a-wiki
+</syntaxhighlight>
+
+{{prevnext|Editing sidebar}}
+
+{{hr}}
+
+<syntaxhighlight lang="shell-session">
+$ mkdir src dist
+$ echo 'Hello, World!' > src/index.wikitext
+$ cat <<EOF > src/.nowiki.json
+{
+  "wg": {
+    "Sitename": "My Site"
+  }
+}
+EOF
 $ docker run \
   --rm \
   -v "$(pwd)"/src:/workspace/src \

@@ -2,7 +2,10 @@
 ** mainpage|mainpage-description
 * Docs
 ** Getting Started|Getting Started
+** Editing sidebar|Editing sidebar
 ** Images|Images
+** Skins|Skins
+* References
 ** nowiki.json|.nowiki.json
 *
 ** helppage|help-mediawiki

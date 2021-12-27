@@ -1,0 +1,29 @@
+You can choose {{ml|Bundled extensions|bundled skins}} in [[nowiki.json|.nowiki.json]].
+
+== Availrable skins ==
+
+* {{ml|Skin:Vector|Vector}} (default)
+* {{ml|Skin:Timeless|Timeless}}
+* {{ml|Skin:Monobook|Monobook}}
+
+== Configuration skin ==
+
+Changing skin is possible by Set <code>Skin</code>.
+
+<syntaxhighlight lang="json">
+{
+  "Skin": "Timeless"
+}
+</syntaxhighlight>
+
+== Skin-specific configurations ==
+
+You can use <code>wg</code> map.
+
+<syntaxhighlight lang="json">
+{
+  "wg": {
+    "VectorDefaultSkinVersion": "1"
+  }
+}
+</syntaxhighlight>

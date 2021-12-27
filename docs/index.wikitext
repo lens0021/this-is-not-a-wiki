@@ -1,25 +1,28 @@
-'''This Is Not A Wiki''' is a static web page generator for {{ml|Wikitext}},
-a wiki markup language for {{ml|MediaWiki}}.
+{{nowiki}} is a static web page generator using {{ml|MediaWiki}}.
 
 == Supported features ==
 
-* Parsing wikitext.
-* Transcluding Templates.
-* Using images on [[commons:Main Page|Wikimedia Commons]].
+With {{nowiki}}, you can use the following features of MediaWiki.
+
+* {{ml|Wikitext}}
+* {{ml|Help:Templates|Templates}}
+* [[Images|Using images on Wikimedia Commons]]
+* {{ml|Bundled extensions and skins}}
 
 == Unsuporretd features ==
 
-* History view
-* All editors (WikiEditor, VisualEditor and CodeEditor)
-* Special pages
 * Search
+* All special pages
+* All editors ({{ml|Extension:WikiEditor|WikiEditor}}, <!--
+-->{{ml|Extension:VisualEditor|VisualEditor}} and {{ml|Extension:CodeEditor|CodeEditor}})
 
-=== Planned ===
+=== Planned features ===
 
-The follwing features are planned to be added.
+The follwing features are currently not supported but planned to be added in the future.
 
-- Local images.
+* JavaScript.
+* Local images.
+* Support for thrid-party skins/extensions.
 
-; Next step
-: [[Getting Started]].
+{{prevnext|Getting Started}}
 {{DISPLAYTITLE:This Is Not A Wiki}}

@@ -1,0 +1,10 @@
+<div style="
+border: 0.2em solid lightgray;
+margin: 0.2em 1em;
+padding: 0.7em;
+display: flex;
+column-gap: 0.5em;
+"><!--
+  --><div>[[File:Xclamation SVG.svg|32px]]</div><!--
+  --><div style="vertical-align: middle;"><p>{{{1|Text here.}}}</p></div>
+</div>
