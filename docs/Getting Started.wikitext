@@ -1,7 +1,7 @@
 This page, we build a basic [[mw:en:"Hello, World!" program|Hello World]] page with {{nowiki}}.
 {{note|This page assumes unix-like OS.}}
 
-{{nowiki}} is formed of two parts: a script and a MediaWiki extension. To simply the whole building
+{{nowiki}} is formed of two parts: a script and a MediaWiki extension. To simplify the whole building
 process, a docker image is provided and this guide will show the usage.
 
 ; Requirement
