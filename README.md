@@ -1,6 +1,6 @@
 # This Is Not A Wiki
 
-**This Is Not A Wiki** is a static web page generator using [MediaWiki], the software used on [Wikipedia].
+**This Is Not A Wiki** is a static web page generator that uses [MediaWiki], the software used on [Wikipedia].
 
 Read more on https://lens0021.github.io/this-is-not-a-wiki/.
 

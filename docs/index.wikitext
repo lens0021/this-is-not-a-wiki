@@ -1,4 +1,4 @@
-{{nowiki}} is a static web page generator using {{ml|MediaWiki}},
+{{nowiki}} is a static web page generator that uses {{ml|MediaWiki}},
 the software used on [https://www.wikipedia.org/ Wikipedia].
 
 == Supported features ==
