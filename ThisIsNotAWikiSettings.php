@@ -8,6 +8,7 @@ $wgFileCacheDepth = 0;
 $wgFileCacheDirectory = '/workspace/dist';
 
 // Contents
+$wgSitename = 'This Is Not A Wiki';
 $wgCapitalLinks = false;
 $wgRestrictDisplayTitle = false;
 $wgUseInstantCommons = true;
