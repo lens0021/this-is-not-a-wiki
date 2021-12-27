@@ -8,7 +8,7 @@ You can choose {{ml|Bundled extensions|bundled skins}} in [[nowiki.json|.nowiki.
 
 == Configuration skin ==
 
-Changing skin is possible by Set <code>Skin</code>.
+Changing skin is possible by set <code>Skin</code>.
 
 <syntaxhighlight lang="json">
 {
