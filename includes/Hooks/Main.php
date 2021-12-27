@@ -48,8 +48,10 @@ class Main implements
 		if ( preg_match( '/action=([^&]+)/', $query, $matches ) ) {
 			$action = $matches[1];
 			if ( $action === 'edit' && $wgThisIsNotAWikiEditUrl ) {
+				$name = str_replace( '_', '%20', $name );
 				$url = str_replace( '$1', $name, $wgThisIsNotAWikiEditUrl );
 			} elseif ( $action === 'history' && $wgThisIsNotAWikiHistoryUrl ) {
+				$name = str_replace( '_', '%20', $name );
 				$url = str_replace( '$1', $name, $wgThisIsNotAWikiHistoryUrl );
 			} else {
 				$url = "./$name.html";
