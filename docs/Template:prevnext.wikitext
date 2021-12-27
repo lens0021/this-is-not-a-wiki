@@ -4,7 +4,7 @@ Usage:
 * {{prevnext|next step}}
 * {{prevnext|previous step|next step}}
 
---><div style="clear: both"><!--
+--><div style="clear: both; overflow: hidden;"><!--
   -->{{#if:{{{2|}}}|
     <div style="float: left;">&larr;&nbsp;[[{{{1|}}}]]</div>
   }}<!--
